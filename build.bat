@@ -153,7 +153,7 @@ xcopy /Y /S /E c:\fpc\3.2.2 .\fpc\
 
 c:\fpc\3.2.2\bin\i386-win32\zip -r -9 osFreeBE fpc REXX watcom
 
-c:\fpc\3.2.2\unins00.exe /verysilent
+c:\fpc\3.2.2\unins000.exe /verysilent
 
 exit
 
