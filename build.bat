@@ -45,7 +45,7 @@ if not exist "%tmp%\Regina394w32.zip" (
 rem Install Regina REXX
 rem if exist C:\REXX\uninstall.exe C:\REXX\uninstall /S
 rem "%tmp%\Regina395w32.exe" /S /D=.\REXX
-"%tmp%\unzip" -o "%tmp%/Regina395w32.zip" -d ./REXX
+"%tmp%\unzip" -o "%tmp%/Regina395w32.zip" -d .\REXX
 
 
 
@@ -149,11 +149,12 @@ rem install fpc
 "%tmp%\unzip" -o "%tmp%\uzlibos2.zip" * -dc:\fpc\3.2.2
 "%tmp%\unzip" -o "%tmp%\fpc-cross.zip" -dc:\fpc\3.2.2\bin\i386-win32
 
-xcopy /Y /S /E c:\fpc\3.2.2 .\fpc\
+xcopy /Y /S /E c:\fpc\3.2.2 .\FPC\
 
 c:\fpc\3.2.2\bin\i386-win32\zip -r -9 osFreeBE fpc REXX watcom
 
-c:\fpc\3.2.2\unins000.exe /verysilent
+start /wait c:\fpc\3.2.2\unins000.exe /verysilent
+rd /s /q c:\fpc
 
 exit
 
